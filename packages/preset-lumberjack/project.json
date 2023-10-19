@@ -1,0 +1,70 @@
+{
+  "name": "preset-lumberjack",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/preset-lumberjack/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/packages/preset-lumberjack",
+        "main": "packages/preset-lumberjack/src/index.ts",
+        "tsConfig": "packages/preset-lumberjack/tsconfig.lib.json",
+        "assets": [
+          "packages/preset-lumberjack/*.md",
+          {
+            "input": "./packages/preset-lumberjack/src",
+            "glob": "**/!(*.ts)",
+            "output": "./src"
+          },
+          {
+            "input": "./packages/preset-lumberjack/src",
+            "glob": "**/*.d.ts",
+            "output": "./src"
+          },
+          {
+            "input": "./packages/preset-lumberjack",
+            "glob": "generators.json",
+            "output": "."
+          },
+          {
+            "input": "./packages/preset-lumberjack",
+            "glob": "executors.json",
+            "output": "."
+          }
+        ]
+      }
+    },
+    "publish": {
+      "command": "node tools/scripts/publish.mjs preset-lumberjack {args.ver} {args.tag}",
+      "dependsOn": ["build"]
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "packages/preset-lumberjack/**/*.ts",
+          "packages/preset-lumberjack/package.json",
+          "packages/preset-lumberjack/generators.json"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "packages/preset-lumberjack/jest.config.ts",
+        "passWithNoTests": true
+      },
+      "configurations": {
+        "ci": {
+          "ci": true,
+          "codeCoverage": true
+        }
+      }
+    }
+  },
+  "tags": []
+}
