@@ -2,7 +2,8 @@
   "name": "create-solana-game",
   "version": "0.0.1",
   "dependencies": {
-    "create-nx-workspace": "16.10.0"
+    "create-nx-workspace": "16.10.0",
+    "tslib": "^2.3.0"
   },
   "type": "commonjs",
   "main": "./src/index.js",
