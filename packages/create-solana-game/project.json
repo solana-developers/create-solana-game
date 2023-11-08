@@ -11,8 +11,7 @@
         "outputPath": "dist/packages/create-solana-game",
         "main": "packages/create-solana-game/bin/index.ts",
         "tsConfig": "packages/create-solana-game/tsconfig.lib.json",
-        "assets": ["packages/create-solana-game/*.md"],
-        "updateBuildableProjectDepsInPackageJson": false
+        "assets": ["packages/create-solana-game/*.md"]
       }
     },
     "publish": {
@@ -20,7 +19,7 @@
       "dependsOn": ["build"]
     },
     "lint": {
-      "executor": "@nx/linter:eslint",
+      "executor": "@nx/eslint:lint",
       "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": [
