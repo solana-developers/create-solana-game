@@ -9,4 +9,4 @@ export default {
   coverageDirectory: '../../coverage/packages/preset-lumberjack-e2e',
   globalSetup: '../../tools/scripts/start-local-registry.ts',
   globalTeardown: '../../tools/scripts/stop-local-registry.ts',
-}
+};
