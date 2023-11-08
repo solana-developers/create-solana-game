@@ -55,3 +55,22 @@ Nx comes with local caching already built-in (check your `nx.json`). On CI you m
 - [Join the community](https://nx.dev/community)
 - [Subscribe to the Nx Youtube Channel](https://www.youtube.com/@nxdevtools)
 - [Follow us on Twitter](https://twitter.com/nxdevtools)
+
+## Contributing
+
+```shell
+yarn nx test preset-lumberjack --watch
+```
+
+```shell
+yarn nx e2e preset-lumberjack-e2e
+```
+
+```shell
+yarn nx g @nx/plugin:plugin preset-lumberjack --directory packages/preset-lumberjack --project-name-and-root-forma
+  t as-provided --import-path=@create-solana-game/preset-lumberjack --publishable --e2e-test-runner jest
+```
+
+```shell
+yarn ts-node add-template-suffix.ts ./packages/preset-lumberjack/src/generators/preset/files/
+```
