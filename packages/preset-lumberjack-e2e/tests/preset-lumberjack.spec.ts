@@ -3,6 +3,7 @@ import { join, dirname } from 'path';
 import { mkdirSync, rmSync } from 'fs';
 
 describe('preset-lumberjack', () => {
+  const cleanUp = process.env['CLEANUP'] !== 'false'
   let projectDirectory: string;
 
   beforeAll(() => {
@@ -19,6 +20,11 @@ describe('preset-lumberjack', () => {
 
   afterAll(() => {
     // Cleanup the test project
+    if (!cleanUp) {
+      console.log(`Skipping cleanup of test project "${projectDirectory}"`)
+      return
+    }
+   //return;
     rmSync(projectDirectory, {
       recursive: true,
       force: true,
@@ -32,6 +38,26 @@ describe('preset-lumberjack', () => {
       stdio: 'inherit',
     });
   });
+
+  /*it('should build anchor', () => {
+    // npm ls will fail if the package is not installed properly
+    execSync('anchor build', {
+      cwd: join(projectDirectory, 'program'),
+      stdio: 'inherit',
+    });
+  });
+
+  it('should install and build yarn', () => {
+    // npm ls will fail if the package is not installed properly
+    execSync('yarn install', {
+      cwd: join(projectDirectory, 'app'),
+      stdio: 'inherit',
+    });
+    execSync('yarn build', {
+      cwd: join(projectDirectory, 'app'),
+      stdio: 'inherit',
+    });
+  });*/ 
 });
 
 /**

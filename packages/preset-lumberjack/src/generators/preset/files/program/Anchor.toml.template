@@ -1,13 +1,13 @@
 [features]
 seeds = false
 [programs.localnet]
-lumberjack = "MkabCfyUD6rBTaYHpgKBBpBo5qzWA2pK2hrGGKMurJt"
+<%=underscoreName%> = "MkabCfyUD6rBTaYHpgKBBpBo5qzWA2pK2hrGGKMurJt"
 
 [registry]
 url = "https://anchor.projectserum.com"
 
 [provider]
-cluster = "localnet"
+cluster = "devnet"
 wallet = "/Users/jonasmac2/.config/solana/id.json"
 
 [scripts]

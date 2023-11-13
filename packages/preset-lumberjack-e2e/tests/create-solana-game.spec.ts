@@ -4,8 +4,14 @@ import { mkdirSync, rmSync } from 'fs';
 
 describe('create-solana-game', () => {
   let projectDirectory: string;
+  const cleanUp = process.env['CLEANUP'] !== 'false'
 
   afterAll(() => {
+    if (!cleanUp) {
+      console.log(`Skipping cleanup of test project "${projectDirectory}"`)
+      return
+    }
+
     // Cleanup the test project
     rmSync(projectDirectory, {
       recursive: true,

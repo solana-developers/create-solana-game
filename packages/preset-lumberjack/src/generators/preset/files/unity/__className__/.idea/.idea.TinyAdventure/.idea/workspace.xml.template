@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="4faabe1f-624b-4170-b7ba-41bdca9b88e8" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../../seven-seas/unity/Assets/SolPlay/Examples/TinyAdventure/TinyAdventure.unity" beforeDir="false" afterPath="$PROJECT_DIR$/../../../seven-seas/unity/Assets/SolPlay/Examples/TinyAdventure/TinyAdventure.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../seven-seas/unity/Assets/SolPlay/GifDecoderFast.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../seven-seas/unity/Assets/SolPlay/GifDecoderFast/Runtime.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../seven-seas/unity/Assets/SolPlay/GifDecoderFast/Runtime/Decode.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../seven-seas/unity/Assets/SolPlay/GifDecoderFast/Runtime/Decode/GifBitBlockReader.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../seven-seas/unity/Assets/SolPlay/GifDecoderFast/Runtime/Decode/GifBitBlockReader.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../seven-seas/unity/Assets/SolPlay/GifDecoderFast/Runtime/Decode/GifCanvas.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../seven-seas/unity/Assets/SolPlay/GifDecoderFast/Runtime/Decode/GifCanvas.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../seven-seas/unity/Assets/SolPlay/GifDecoderFast/Runtime/Decode/GifLzwDictionary.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../seven-seas/unity/Assets/SolPlay/GifDecoderFast/Runtime/Decode/GifLzwDictionary.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../seven-seas/unity/Assets/SolPlay/GifDecoderFast/Runtime/GifStream.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../seven-seas/unity/Assets/SolPlay/GifDecoderFast/Runtime/GifStream.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../seven-seas/unity/Assets/SolPlay/GifDecoderFast/Runtime/Model.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../seven-seas/unity/Assets/SolPlay/GifDecoderFast/Runtime/Model/GifApplicationExtension.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../seven-seas/unity/Assets/SolPlay/GifDecoderFast/Runtime/Model/GifApplicationExtension.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../seven-seas/unity/Assets/SolPlay/GifDecoderFast/Runtime/Model/GifDisposalMethod.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../seven-seas/unity/Assets/SolPlay/GifDecoderFast/Runtime/Model/GifDisposalMethod.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../seven-seas/unity/Assets/SolPlay/GifDecoderFast/Runtime/Model/GifGraphicControl.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../seven-seas/unity/Assets/SolPlay/GifDecoderFast/Runtime/Model/GifGraphicControl.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../seven-seas/unity/Assets/SolPlay/GifDecoderFast/Runtime/Model/GifHeader.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../seven-seas/unity/Assets/SolPlay/GifDecoderFast/Runtime/Model/GifHeader.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../seven-seas/unity/Assets/SolPlay/GifDecoderFast/Runtime/Model/GifImage.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../seven-seas/unity/Assets/SolPlay/GifDecoderFast/Runtime/Model/GifImage.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../seven-seas/unity/Assets/SolPlay/GifDecoderFast/Runtime/Model/GifImageDescriptor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../seven-seas/unity/Assets/SolPlay/GifDecoderFast/Runtime/Model/GifImageDescriptor.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../seven-seas/unity/Assets/SolPlay/GifDecoderFast/Runtime/Model/GifNetscapeExtension.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../seven-seas/unity/Assets/SolPlay/GifDecoderFast/Runtime/Model/GifNetscapeExtension.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../seven-seas/unity/Assets/SolPlay/GifDecoderFast/Runtime/Model/GifPalette.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../seven-seas/unity/Assets/SolPlay/GifDecoderFast/Runtime/Model/GifPalette.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../seven-seas/unity/Assets/SolPlay/GifDecoderFast/Runtime/Model/GifPlainText.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../seven-seas/unity/Assets/SolPlay/GifDecoderFast/Runtime/Model/GifPlainText.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../seven-seas/unity/Assets/SolPlay/GifDecoderFast/Runtime/Model/GifVersion.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../seven-seas/unity/Assets/SolPlay/GifDecoderFast/Runtime/Model/GifVersion.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../seven-seas/unity/Assets/SolPlay/GifDecoderFast/Runtime/UnityGifDecoder.asmdef" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../seven-seas/unity/Assets/SolPlay/GifDecoderFast/Runtime/UnityGifDecoder.asmdef.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../seven-seas/unity/Assets/SolPlay/GifDecoderFast/Runtime/Utils.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../seven-seas/unity/Assets/SolPlay/GifDecoderFast/Runtime/Utils/BitUtils.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../seven-seas/unity/Assets/SolPlay/GifDecoderFast/Runtime/Utils/BitUtils.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../seven-seas/unity/Assets/SolPlay/Scripts/Services/NftService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../../seven-seas/unity/Assets/SolPlay/Scripts/Services/NftService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../seven-seas/unity/Assets/SolPlay/Scripts/Services/SolPlayWebSocketService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../../seven-seas/unity/Assets/SolPlay/Scripts/Services/SolPlayWebSocketService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../seven-seas/unity/Assets/SolPlay/WebSockets/WebSocket.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../../seven-seas/unity/Assets/SolPlay/WebSockets/WebSocket.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../seven-seas/unity/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../../seven-seas/unity/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../seven-seas/unity/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../../../seven-seas/unity/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../seven-seas/unity/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../../../seven-seas/unity/UserSettings/EditorUserSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../seven-seas/unity/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../seven-seas/unity/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../app/utils/anchor.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../app/utils/anchor.ts" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/46b90a44b80545818c9894072cd973622e800/b9/80a7deca/ClientFactory.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.solana.unity_sdk@4f10615ecf/Runtime/codebase/WalletBase.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.performance.profile-analyzer@1.1.1/Editor/TopMarkers.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/46b90a44b80545818c9894072cd973622e800/ea/db2d982d/Transaction.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/46b90a44b80545818c9894072cd973622e800/6d/2a6788f3/SolanaStreamingRpcClient.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../../Solana.Unity-SDK/Runtime/codebase/Web3.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/9384495d2a482ac7341d67ca84e16d267d16c62458a9d67a92b119199a9/System.Threading.Tasks.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../../Solana.Unity-SDK/Runtime/codebase/nft/nft_interfaces/iNftFile.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/46b90a44b80545818c9894072cd973622e800/f9/3e8be8ca/IStreamingRpcClient.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Utilities/Clipboard.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.performance.profile-analyzer@1.1.1/Editor/Columns.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Interface/LudiqGUIUtility.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ide.visualstudio@2.0.16/Editor/ProjectGeneration/FileIOProvider.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../../Solana.Unity-SDK/Runtime/codebase/utility/FileDownloader.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../../Solana.Unity-SDK/Runtime/codebase/nft/Nft.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../../Solana.Unity-SDK/Runtime/codebase/data/MetaplexData.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/1f31cb8b27da478388ea44e658f52bb94400/79/a9f98b69/GplSessionProgram.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5e2d116f98d140d0a76ec8a673a2a4ac469000/aa/e13370f4/TaskAwaiter`1.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/46b90a44b80545818c9894072cd973622e800/3a/5ef844a1/Cluster.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5e2d116f98d140d0a76ec8a673a2a4ac469000/20/76f8cd9c/Task.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5e2d116f98d140d0a76ec8a673a2a4ac469000/fc/f3c1111c/Task`1.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5e5d3c5645854f6095878615ec04f33141600/8a/385bcccf/PublicKey.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/46b90a44b80545818c9894072cd973622e800/9c/0fad5690/AccountMeta.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
+  <component name="MacroExpansionManager">
+    <option name="directoryName" value="j5o4tjnn" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2RvTQRSX91fphLIEnmbqPORFEJf" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Discover.Launch.Via.Unity" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="rider.run.widget.enabled.cache" value="false" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="projectPathOnTarget" />
+      <option name="selectedOptions">
+        <list />
+      </option>
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="7588">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" value="7588" />
+      <option name="projectPathOnTarget" />
+      <option name="selectedOptions">
+        <list />
+      </option>
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4faabe1f-624b-4170-b7ba-41bdca9b88e8" name="Changes" comment="" />
+      <created>1688129539547</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1688129539547</updated>
+      <workItem from="1688129539651" duration="180000" />
+      <workItem from="1688129755128" duration="7414000" />
+      <workItem from="1688369767033" duration="20931000" />
+      <workItem from="1688565713158" duration="3871000" />
+      <workItem from="1688598628203" duration="1829000" />
+      <workItem from="1688683463367" duration="12348000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
+  <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/SolPlayLight/NftListPopup.cs</url>
+          <line>72</line>
+          <properties documentPath="$PROJECT_DIR$/Assets/SolPlayLight/NftListPopup.cs" initialLine="64" containingFunctionPresentation="lambda expression inside method 'Open'">
+            <startOffsets>
+              <option value="2380" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2388" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="Type#Solana.Unity.SDK.Nft.NftImage" memberName="file" />
+      </pinned-members>
+    </pin-to-top-manager>
+  </component>
+</project>

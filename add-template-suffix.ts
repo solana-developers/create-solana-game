@@ -19,6 +19,9 @@ if (!files.length) {
 }
 
 for (const file of files) {
+  if (file.endsWith(".meta") || file.endsWith(".png") || file.endsWith(".dll")|| file.endsWith(".unity")) {
+    continue;
+  }
   const newFile = `${file}${suffix}`;
   fs.renameSync(file, newFile);
   console.log(` - Renamed ${file} to ${newFile}`);

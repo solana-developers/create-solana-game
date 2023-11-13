@@ -2,7 +2,9 @@
   "name": "@create-solana-game/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "local-registry": "nx run @create-solana-game/source:local-registry"
+  },
   "private": true,
   "dependencies": {
     "@nx/devkit": "17.0.3",
