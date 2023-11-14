@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 using Cysharp.Threading.Tasks;
 using Frictionless;
 using Game.Scripts.Ui;
-using Lumberjack;
-using Lumberjack.Accounts;
-using Lumberjack.Program;
+using <%=className%>;
+using <%=className%>.Accounts;
+using <%=className%>.Program;
 using Solana.Unity.Programs;
 using Solana.Unity.Programs.Models;
 using Solana.Unity.Rpc.Core.Http;
@@ -50,7 +50,7 @@ public class AnchorService : MonoBehaviour
     private PublicKey PlayerDataPDA;
     private PublicKey GameDataPDA;
     private bool _isInitialized;
-    private LumberjackClient anchorClient;
+    private <%=className%>Client anchorClient;
     private int blockingTransactionsInProgress;
     private int nonBlockingTransactionsInProgress;
     private long? sessionValidUntil;
@@ -92,7 +92,7 @@ public class AnchorService : MonoBehaviour
 
         FindPDAs(account);
 
-        anchorClient = new LumberjackClient(Web3.Rpc, Web3.WsRpc, AnchorProgramIdPubKey);
+        anchorClient = new <%=className%>Client(Web3.Rpc, Web3.WsRpc, AnchorProgramIdPubKey);
 
         await SubscribeToPlayerDataUpdates();
         await SubscribeToGameDataUpdates();
@@ -221,7 +221,7 @@ public class AnchorService : MonoBehaviour
         accounts.Signer = Web3.Account;
         accounts.SystemProgram = SystemProgram.ProgramIdKey;
 
-        var initTx = LumberjackProgram.InitPlayer(accounts, levelSeed, AnchorProgramIdPubKey);
+        var initTx = <%=className%>Program.InitPlayer(accounts, levelSeed, AnchorProgramIdPubKey);
         tx.Add(initTx);
 
         if (true)
@@ -336,7 +336,7 @@ public class AnchorService : MonoBehaviour
             transaction.FeePayer = sessionWallet.Account.PublicKey;
             chopTreeAccounts.Signer = sessionWallet.Account.PublicKey;
             chopTreeAccounts.SessionToken = sessionWallet.SessionTokenPDA;
-            var chopInstruction = LumberjackProgram.ChopTree(chopTreeAccounts, levelSeed, transactionCounter, AnchorProgramIdPubKey);
+            var chopInstruction = <%=className%>Program.ChopTree(chopTreeAccounts, levelSeed, transactionCounter, AnchorProgramIdPubKey);
             transaction.Add(chopInstruction);
             Debug.Log("Sign and send chop tree with session");
             await SendAndConfirmTransaction(sessionWallet, transaction, "Chop Tree with session.", isBlocking: false, onSucccess: onSuccess);
@@ -345,7 +345,7 @@ public class AnchorService : MonoBehaviour
         {
             transaction.FeePayer = Web3.Account.PublicKey;
             chopTreeAccounts.Signer = Web3.Account.PublicKey;
-            var chopInstruction = LumberjackProgram.ChopTree(chopTreeAccounts, levelSeed, transactionCounter, AnchorProgramIdPubKey);
+            var chopInstruction = <%=className%>Program.ChopTree(chopTreeAccounts, levelSeed, transactionCounter, AnchorProgramIdPubKey);
             transaction.Add(chopInstruction);
             Debug.Log("Sign and send init without session");
             await SendAndConfirmTransaction(Web3.Wallet, transaction, "Chop Tree without session.", onSucccess: onSuccess);

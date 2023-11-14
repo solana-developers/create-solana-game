@@ -308,7 +308,7 @@ MonoBehaviour:
   m_SerializedViewNames:
   - UnityEditor.GameView
   m_SerializedViewValues:
-  - /Users/jonasmac2/Documents/GitHub/solana_game_preset/unity/Lumberjack/Library/PlayModeViewStates/abd5aa5f5622b494fbdcf239ede413d8
+  - /Users/jonasmac2/Documents/GitHub/solana_game_preset/unity/<%=className%>/Library/PlayModeViewStates/abd5aa5f5622b494fbdcf239ede413d8
   m_PlayModeViewName: Device Simulator
   m_ShowGizmos: 0
   m_TargetDisplay: 0
@@ -385,7 +385,7 @@ MonoBehaviour:
   m_LastFolders:
   - Assets/Game/Prefabs
   m_LastFoldersGridSize: 16
-  m_LastProjectPath: /Users/jonasmac2/Documents/GitHub/solana_game_preset/unity/Lumberjack
+  m_LastProjectPath: /Users/jonasmac2/Documents/GitHub/solana_game_preset/unity/<%=className%>
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:

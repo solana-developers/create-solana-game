@@ -1,5 +1,5 @@
 using System;
-using Lumberjack.Accounts;
+using <%=className%>.Accounts;
 using Solana.Unity.SDK;
 using Solana.Unity.Wallet.Bip39;
 using UnityEngine;
