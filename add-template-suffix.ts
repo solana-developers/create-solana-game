@@ -10,7 +10,7 @@ const suffix = '.template';
 
 console.log(`Renaming files in ${path}...`);
 const files = getRecursiveFileList(path).filter(
-  (file) => !file.endsWith(suffix)
+  (file) => !file.endsWith(suffix) && !file.endsWith('.DS_Store')
 );
 
 if (!files.length) {
@@ -19,7 +19,13 @@ if (!files.length) {
 }
 
 for (const file of files) {
-  if (file.endsWith(".meta") || file.endsWith(".png") || file.endsWith(".dll")|| file.endsWith(".unity")) {
+  if (
+    file.endsWith('.meta') ||
+    file.endsWith('.png') ||
+    file.endsWith('.dll') ||
+    file.endsWith('.unity') ||
+    file.endsWith('.DS_Store')
+  ) {
     continue;
   }
   const newFile = `${file}${suffix}`;
