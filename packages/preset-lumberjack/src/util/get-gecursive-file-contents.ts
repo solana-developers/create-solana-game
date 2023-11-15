@@ -2,7 +2,7 @@ import { Tree } from '@nx/devkit';
 
 export interface FileContents {
   path: string;
-  content?: string;
+  content?: string | string[];
   isBinary?: boolean;
   children?: Record<string, FileContents>;
 }
@@ -10,13 +10,17 @@ export interface FileContents {
 const binaries = [
   'asset',
   'cginc',
+  'DS_Store',
+  'dll',
   'dwlt',
   'eot',
   'gif',
   'ico',
   'jpeg',
   'jpg',
+  'lock',
   'mat',
+  'mdb',
   'meta',
   'pdf',
   'png',
@@ -28,26 +32,44 @@ const binaries = [
   'woff2',
 ];
 
-export function getRecursiveFileContents(tree: Tree, path: string) {
+export function getRecursiveFileContents(
+  tree: Tree,
+  path: string,
+  includeBinaries = false
+) {
   const contents: Record<string, FileContents> = {};
-  const dir = tree.children(path);
+  const dir = tree.children(path).sort();
   dir.forEach((file) => {
     if (tree.isFile(`${path}/${file}`)) {
       const isBinary = binaries.includes(file.split('.').pop());
+      const content = tree.read(`${path}/${file}`);
+      const binaryContent = includeBinaries ? content.toString('base64') : null;
+
       contents[file] = {
         path: `${path}/${file}`,
         isBinary,
         content: isBinary
-          ? null
-          : tree.read(`${path}/${file}`).toString('utf-8'),
+          ? binaryContent
+          : formatOutput(content.toString('utf-8')),
       };
     } else {
       contents[file] = {
         path: `${path}/${file}`,
-        children: getRecursiveFileContents(tree, `${path}/${file}`),
+        children: getRecursiveFileContents(
+          tree,
+          `${path}/${file}`,
+          includeBinaries
+        ),
       };
     }
   });
 
   return contents;
+}
+
+export function formatOutput(value: string) {
+  return value
+    .split('\n')
+    .map((line) => line.trim())
+    .filter((line) => line.length > 0);
 }
