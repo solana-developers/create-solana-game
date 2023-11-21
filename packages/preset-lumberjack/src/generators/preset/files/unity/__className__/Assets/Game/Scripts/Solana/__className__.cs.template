@@ -12,12 +12,12 @@ using Solana.Unity.Rpc.Core.Http;
 using Solana.Unity.Rpc.Core.Sockets;
 using Solana.Unity.Rpc.Types;
 using Solana.Unity.Wallet;
-using Lumberjack;
-using Lumberjack.Program;
-using Lumberjack.Errors;
-using Lumberjack.Accounts;
+using <%=className%>;
+using <%=className%>.Program;
+using <%=className%>.Errors;
+using <%=className%>.Accounts;
 
-namespace Lumberjack
+namespace <%=className%>
 {
     namespace Accounts
     {
@@ -100,16 +100,16 @@ namespace Lumberjack
 
     namespace Errors
     {
-        public enum LumberjackErrorKind : uint
+        public enum <%=className%>ErrorKind : uint
         {
             NotEnoughEnergy = 6000U,
             WrongAuthority = 6001U
         }
     }
 
-    public partial class LumberjackClient : TransactionalBaseClient<LumberjackErrorKind>
+    public partial class <%=className%>Client : TransactionalBaseClient<<%=className%>ErrorKind>
     {
-        public LumberjackClient(IRpcClient rpcClient, IStreamingRpcClient streamingRpcClient, PublicKey programId) : base(rpcClient, streamingRpcClient, programId)
+        public <%=className%>Client(IRpcClient rpcClient, IStreamingRpcClient streamingRpcClient, PublicKey programId) : base(rpcClient, streamingRpcClient, programId)
         {
         }
 
@@ -179,25 +179,25 @@ namespace Lumberjack
 
         public async Task<RequestResult<string>> SendInitPlayerAsync(InitPlayerAccounts accounts, string levelSeed, PublicKey feePayer, Func<byte[], PublicKey, byte[]> signingCallback, PublicKey programId)
         {
-            Solana.Unity.Rpc.Models.TransactionInstruction instr = Program.LumberjackProgram.InitPlayer(accounts, levelSeed, programId);
+            Solana.Unity.Rpc.Models.TransactionInstruction instr = Program.<%=className%>Program.InitPlayer(accounts, levelSeed, programId);
             return await SignAndSendTransaction(instr, feePayer, signingCallback);
         }
 
         public async Task<RequestResult<string>> SendChopTreeAsync(ChopTreeAccounts accounts, string levelSeed, ushort counter, PublicKey feePayer, Func<byte[], PublicKey, byte[]> signingCallback, PublicKey programId)
         {
-            Solana.Unity.Rpc.Models.TransactionInstruction instr = Program.LumberjackProgram.ChopTree(accounts, levelSeed, counter, programId);
+            Solana.Unity.Rpc.Models.TransactionInstruction instr = Program.<%=className%>Program.ChopTree(accounts, levelSeed, counter, programId);
             return await SignAndSendTransaction(instr, feePayer, signingCallback);
         }
 
         public async Task<RequestResult<string>> SendSuperChopTreeAsync(SuperChopTreeAccounts accounts, string levelSeed, ushort counter, PublicKey feePayer, Func<byte[], PublicKey, byte[]> signingCallback, PublicKey programId)
         {
-            Solana.Unity.Rpc.Models.TransactionInstruction instr = Program.LumberjackProgram.SuperChopTree(accounts, levelSeed, counter, programId);
+            Solana.Unity.Rpc.Models.TransactionInstruction instr = Program.<%=className%>Program.SuperChopTree(accounts, levelSeed, counter, programId);
             return await SignAndSendTransaction(instr, feePayer, signingCallback);
         }
 
-        protected override Dictionary<uint, ProgramError<LumberjackErrorKind>> BuildErrorsDictionary()
+        protected override Dictionary<uint, ProgramError<<%=className%>ErrorKind>> BuildErrorsDictionary()
         {
-            return new Dictionary<uint, ProgramError<LumberjackErrorKind>>{{6000U, new ProgramError<LumberjackErrorKind>(LumberjackErrorKind.NotEnoughEnergy, "Not enough energy")}, {6001U, new ProgramError<LumberjackErrorKind>(LumberjackErrorKind.WrongAuthority, "Wrong Authority")}, };
+            return new Dictionary<uint, ProgramError<<%=className%>ErrorKind>>{{6000U, new ProgramError<<%=className%>ErrorKind>(<%=className%>ErrorKind.NotEnoughEnergy, "Not enough energy")}, {6001U, new ProgramError<<%=className%>ErrorKind>(<%=className%>ErrorKind.WrongAuthority, "Wrong Authority")}, };
         }
     }
 
@@ -240,7 +240,7 @@ namespace Lumberjack
             public PublicKey SystemProgram { get; set; }
         }
 
-        public static class LumberjackProgram
+        public static class <%=className%>Program
         {
             public static Solana.Unity.Rpc.Models.TransactionInstruction InitPlayer(InitPlayerAccounts accounts, string levelSeed, PublicKey programId)
             {
