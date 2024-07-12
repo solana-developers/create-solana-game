@@ -21,6 +21,7 @@ using Solana.Unity.Wallet;
 using Services;
 using UnityEngine;
 using Debug = UnityEngine.Debug;
+using SessionToken = Solana.Unity.SessionKeys.GplSession.Accounts.SessionToken;
 
 public class AnchorService : MonoBehaviour
 {
@@ -156,8 +157,9 @@ public class AnchorService : MonoBehaviour
 
         if (playerData != null)
         {
-            await anchorClient.SubscribePlayerDataAsync(PlayerDataPDA, (state, value, playerData) =>
+            await anchorClient.SubscribePlayerDataAsync(PlayerDataPDA, async (state, value, playerData) =>
             {
+                await UniTask.SwitchToMainThread();
                 OnReceivedPlayerDataUpdate(playerData);
             }, Commitment.Processed);
         }
@@ -192,8 +194,9 @@ public class AnchorService : MonoBehaviour
 
         if (gameData != null)
         {
-            await anchorClient.SubscribeGameDataAsync(GameDataPDA, (state, value, gameData) =>
+            await anchorClient.SubscribeGameDataAsync(GameDataPDA, async (state, value, gameData) =>
             {
+                await UniTask.SwitchToMainThread();
                 OnRecievedGameDataUpdate(gameData);
             }, Commitment.Processed);
         }
@@ -224,7 +227,7 @@ public class AnchorService : MonoBehaviour
         var initTx = <%=className%>Program.InitPlayer(accounts, levelSeed, AnchorProgramIdPubKey);
         tx.Add(initTx);
 
-        if (true)
+        if (useSession)
         {
             if (!(await IsSessionTokenInitialized()))
             {
@@ -280,8 +283,9 @@ public class AnchorService : MonoBehaviour
             if (res.RawRpcResponse.Contains("InsufficientFundsForRent"))
             {
                 Debug.Log("Trigger session top up (Not implemented)");
-                // TODO: this can probably happen when the session key runs out of funds. 
-                //TriggerTopUpTransaction();
+                // TODO: This can probably happen when the session key runs out of funds. Easiest is to just create a 
+                // new session in this popup. Other option would be to implement a topup popup
+                ServiceFactory.Resolve<UiService>().OpenPopup(UiService.ScreenType.SessionPopup, new SessionPopupUiData());
             }
 
             LastError = res.RawRpcResponse;
@@ -305,7 +309,7 @@ public class AnchorService : MonoBehaviour
 
     public async void ChopTree(bool useSession, Action onSuccess)
     {
-        if (!Instance.IsSessionValid())
+        if (!Instance.IsSessionValid() && useSession)
         {
             await Instance.UpdateSessionValid();
             ServiceFactory.Resolve<UiService>().OpenPopup(UiService.ScreenType.SessionPopup, new SessionPopupUiData());

@@ -65,29 +65,29 @@ yarn nx test preset-lumberjack --watch
 ```shell
 yarn nx e2e preset-lumberjack-e2e
 ```
- 
+
 ```shell
 yarn nx g @nx/plugin:plugin preset-lumberjack --directory packages/preset-lumberjack --project-name-and-root-forma
   t as-provided --import-path=@create-solana-game/preset-lumberjack --publishable --e2e-test-runner jest
 ```
-
 
 ```shell
 yarn ts-node add-template-suffix.ts ./packages/preset-lumberjack/src/generators/preset/files/
 ```
 
 ```shell
-npx nx run-many --targets publish --ver 1.0.2 --tag local
+npx nx run-many --targets publish --ver 1.0.6 --tag local
 ```
 
 For release
+
 ```shell
-npx nx run-many --targets publish --ver 1.0.2 --tag latest
+npx nx run-many --targets publish --ver 1.0.6 --tag latest
 ```
 
 To run with local registry
+
 ```shell
 yarn local-registry
-npx create-solana-game@local <name> 
+npx create-solana-game@local <name>
 ```
-

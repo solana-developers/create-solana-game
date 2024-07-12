@@ -298,6 +298,12 @@ dotnet tool install Solana.Unity.Anchor.Tool <- run once
 dotnet anchorgen -i target/idl/<%=name%>.json -o target/idl/<%=className%>.cs
 ```
 
+If you are still on an old version that is not compatible with anchor 0.30.1 (<0.2.13) please run:
+
+```bash
+dotnet tool update -g Solana.Unity.Anchor.Tool
+```
+
 ### Session keys
 
 Session keys is an optional component. What it does is creating a local key pair which is toped up with some sol which can be used to autoapprove transactions. The session token is only allowed on certain functions of the program and has an expiry of 23 hours. Then the player will get the sol back and can create a new session.  
