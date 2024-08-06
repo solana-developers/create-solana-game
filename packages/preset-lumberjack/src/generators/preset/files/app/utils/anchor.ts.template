@@ -1,12 +1,25 @@
-import { Program, IdlAccounts, BN } from "@coral-xyz/anchor"
-import { <%=className%>, IDL } from "../idl/<%=name%>"
+import { Program, IdlAccounts, BN, AnchorProvider } from "@coral-xyz/anchor";
+import IDL from "../idl/<%=name%>.json";
+import { <%=className%> } from "@/idl/<%=name%>";
 import { clusterApiUrl, Connection, PublicKey } from "@solana/web3.js"
 import { WrappedConnection } from "./wrappedConnection";
+import {
+  AnchorWallet,
+  useConnection,
+  useWallet,
+} from "@solana/wallet-adapter-react";
 
-export const CONNECTION = new WrappedConnection(process.env.NEXT_PUBLIC_RPC ? process.env.NEXT_PUBLIC_RPC : 'https://rpc.magicblock.app/devnet',  {
-  wsEndpoint: process.env.NEXT_PUBLIC_WSS_RPC ? process.env.NEXT_PUBLIC_WSS_RPC : "wss://rpc.magicblock.app/devnet",
-  commitment: 'confirmed' 
-});
+export const CONNECTION = new WrappedConnection(
+  process.env.NEXT_PUBLIC_RPC
+    ? process.env.NEXT_PUBLIC_RPC
+    : "https://rpc.magicblock.app/devnet",
+  {
+    wsEndpoint: process.env.NEXT_PUBLIC_WSS_RPC
+      ? process.env.NEXT_PUBLIC_WSS_RPC
+      : "wss://rpc.magicblock.app/devnet",
+    commitment: "confirmed",
+  }
+);
 
 export const METAPLEX_READAPI = "https://devnet.helius-rpc.com/?api-key=78065db3-87fb-431c-8d43-fcd190212125";
 
@@ -14,16 +27,24 @@ export const METAPLEX_READAPI = "https://devnet.helius-rpc.com/?api-key=78065db3
 export const GAME_DATA_SEED = "level_2";
 
 // <%=className%> game program ID
-const programId = new PublicKey("MkabCfyUD6rBTaYHpgKBBpBo5qzWA2pK2hrGGKMurJt")
+export const PROGRAM_ID = new PublicKey(IDL.address);
 
-// Create the program interface using the idl, program ID, and provider
-export const program = new Program<<%=className%>>(IDL, programId, {
-  connection: CONNECTION,
-})
+export function getProgram(provider: AnchorProvider) {
+  return new Program(IDL as <%=className%>, provider);
+}
+
+export function useAnchorProvider() {
+  const { connection } = useConnection();
+  const wallet = useWallet();
+
+  return new AnchorProvider(connection, wallet as AnchorWallet, {
+    commitment: "confirmed",
+  });
+}
 
 export const [gameDataPDA] = PublicKey.findProgramAddressSync(
   [Buffer.from(GAME_DATA_SEED, "utf8")],
-  program.programId
+  PROGRAM_ID
 )
 
 // Player Data Account Type from Idl
