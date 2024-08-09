@@ -76,13 +76,13 @@ yarn ts-node add-template-suffix.ts ./packages/preset-lumberjack/src/generators/
 ```
 
 ```shell
-npx nx run-many --targets publish --ver 1.0.6 --tag local
+npx nx run-many --targets publish --ver 1.0.9 --tag local
 ```
 
 For release
 
 ```shell
-npx nx run-many --targets publish --ver 1.0.6 --tag latest
+npx nx run-many --targets publish --ver 1.0.9 --tag latest
 ```
 
 To run with local registry

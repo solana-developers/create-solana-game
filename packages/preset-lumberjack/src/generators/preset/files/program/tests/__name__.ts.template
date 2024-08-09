@@ -1,6 +1,6 @@
 import * as anchor from "@coral-xyz/anchor";
 import { Program } from "@coral-xyz/anchor";
-import { <%=className%> } from "../target/types/<%=name%>";
+import { <%=className%> } from "../target/types/<%=underscoreName%>";
 
 describe("<%=name%>", () => {
   const provider = anchor.AnchorProvider.env();
