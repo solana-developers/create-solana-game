@@ -19,7 +19,7 @@ const SessionKeyButton = () => {
     try {
       const session = await sessionWallet.createSession(
         PROGRAM_ID,
-        topUp,
+        topUp ? 10000000 : 0,
         expiryInMinutes
       );
       console.log("Session created:", session);
